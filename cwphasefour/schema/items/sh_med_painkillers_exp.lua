@@ -20,10 +20,6 @@ ITEM.customFunctions = {"Empty", "Give"};
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
 	player:TakeDamage(15, player, player);
-end;
-
--- Called after consuming, to return our junk items.
-function ITEM:OnUse(player, itemEntity)
 	player:GiveItem(Clockwork.item:CreateInstance("empty_pillbottle2"));
 end;
 
